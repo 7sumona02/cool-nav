@@ -25,7 +25,7 @@ const Page = () => {
 
       <div className={`absolute inset-0 z-50 h-full w-full transition-all duration-500 ease-in-out ${
         isMenuOpen 
-          ? 'transform md:-rotate-9 -rotate-20 md:translate-x-[24rem] translate-x-[14rem]  md:translate-y-[6rem] rounded-xl' 
+          ? 'transform md:-rotate-9 -rotate-20 md:translate-x-[24rem] translate-x-[14rem]  md:translate-y-[4rem] rounded-xl' 
           : ''
       }`}>
         <div className='absolute inset-0 flex flex-col items-center justify-center'>
