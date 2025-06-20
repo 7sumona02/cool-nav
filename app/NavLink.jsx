@@ -1,6 +1,13 @@
 'use client'
 import { useState } from 'react';
 import { motion, AnimatePresence, easeInOut } from 'framer-motion';
+import { Instrument_Serif } from 'next/font/google';
+import { cn } from '@/lib/utils';
+    
+const is = Instrument_Serif({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 const NavLink = () => {
   const [activeBackground, setActiveBackground] = useState(null);
@@ -57,7 +64,7 @@ const NavLink = () => {
             >
               <a
                 href={`#${item.id}`}
-                className="text-3xl uppercase tracking-tighter font-semibold px-4 py-2 hover:text-neutral-100 transition-colors duration-300"
+                className={cn("text-6xl uppercase tracking-tighter px-4 py-2 hover:text-neutral-100 transition-colors duration-300", `${is.className} font-black`)}
               >
                 {item.label}
               </a>

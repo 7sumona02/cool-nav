@@ -1,33 +1,45 @@
 'use client'
+
+import { useState } from 'react';
 import { Instrument_Serif } from 'next/font/google';
-import {easeInOut, motion} from 'motion/react'
-import { cn } from '@/lib/utils';
-import { WordsPullUp } from '@/components/Words';
+import Landing from '@/components/Landing';
+import NavLink from '../NavLink';
 
 const is = Instrument_Serif({
   weight: '400',
   subsets: ['latin'],
 })
 
-const page = () => {
+const Page = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className={cn('min-h-screen w-full flex items-center justify-center bg-neutral-100 relative', `${is.className}`)}>
-      <motion.img 
-      initial={{opacity: 0, scale: 0.95, filter: 'blur(10px)'}}
-      animate={{opacity: 1, scale: 1, filter: 'blur(0px)'}}
-      transition={{duration: 0.3, ease: easeInOut}}
-      src='/rose.png'
-      alt='rose'
-      className='absolute inset-0 translate-y-24 translate-x-[24rem] w-[40rem]' />
-      {/* <motion.h1 
-      className='z-50 text-8xl font-extrabold text-center'>We create <br /> & grow  <br /> brands made  <br /> to share.</motion.h1> */}
-     <div>
-       <WordsPullUp
-        text='We create & grow brands made to share.'
-      />
-     </div>
+    <div className='h-screen w-full overflow-hidden relative'>
+      <div>
+        <NavLink />
+      </div>
+
+      <div className={`absolute inset-0 z-50 h-full w-full transition-all duration-500 ease-in-out ${
+        isMenuOpen 
+          ? 'transform md:-rotate-9 -rotate-20 md:translate-x-[24rem] translate-x-[14rem]  md:translate-y-[6rem] rounded-xl' 
+          : ''
+      }`}>
+        <div className='absolute inset-0 flex flex-col items-center justify-center'>
+          <button 
+          onClick={toggleMenu}
+          className={`${is.className} absolute z-100 top-4 left-4 border-2 border-black px-2 py-1 rounded-full cursor-pointer text-neutral-6 font-bold transition-colors`}
+        >
+          {isMenuOpen ? 'close' : 'menu'}
+        </button>
+          <Landing />
+        </div>
+      </div>
     </div>
   )
 }
 
-export default page
+export default Page

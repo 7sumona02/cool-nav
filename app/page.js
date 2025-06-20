@@ -17,12 +17,12 @@ const Page = () => {
   };
 
   return (
-    <div className='min-h-screen w-full bg-neutral-400 relative'>
+    <div className='min-h-screen w-full relative'>
       <div>
         <NavLink />
       </div>
 
-      <div className={`absolute inset-0 bg-white z-50 h-full w-full transition-all duration-500 ease-in-out ${
+      {/* <div className={`absolute inset-0 bg-white z-50 h-full w-full transition-all duration-500 ease-in-out ${
         isMenuOpen 
           ? 'transform md:-rotate-9 -rotate-20 md:translate-x-[24rem] translate-x-[14rem]  md:translate-y-[6rem] rounded-xl' 
           : ''
@@ -36,7 +36,7 @@ const Page = () => {
         <div className='md:min-h-[40rem] min-h-[32rem] flex items-center justify-center'>
           <h1 className={`text-4xl ${is.className}`}>c()nt</h1>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
