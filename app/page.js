@@ -34,7 +34,7 @@ const Page = () => {
 
       <div className={`absolute inset-0 bg-[#2d2d2d] z-50 h-full w-full transition-all duration-500 ease-in-out ${
         isMenuOpen 
-          ? 'transform md:-rotate-9 -rotate-20 md:translate-x-[24rem] translate-x-[14rem] md:translate-y-[6rem] rounded-2xl' 
+          ? 'transform md:-rotate-9 -rotate-20 md:translate-x-[24rem] translate-x-[14rem] md:translate-y-[3.5rem] rounded-2xl' 
           : 'bg-black'
       }`}>
         <button 

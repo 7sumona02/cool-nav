@@ -84,7 +84,7 @@ const NavLink1 = () => {
                 >
                   <a
                     href={`#${item.id}`}
-                    className={cn("text-4xl tracking-tighter px-4 py-2 text-neutral-100 transition-colors duration-300", `${inter.className} font-black`)}
+                    className={cn("md:text-4xl text-2xl tracking-tighter md:px-4 py-2 text-neutral-100 transition-colors duration-300", `${inter.className} font-black`)}
                   >
                     {item.label}
                   </a>
