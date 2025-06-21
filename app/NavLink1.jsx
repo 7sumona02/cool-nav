@@ -87,6 +87,7 @@ const NavLink1 = () => {
                     setActiveBackground(null);
                     setHoveredItem(null);
                   }}
+                  whileHover={{ scale: 1.03 }}
                 >
                   <a
                     href={`#${item.id}`}
