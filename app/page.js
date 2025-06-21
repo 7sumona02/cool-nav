@@ -34,7 +34,7 @@ const Page = () => {
         >
           {isMenuOpen ? <X className='w-5 text-white' /> : <AlignLeft className='w-5 text-white' />}
         </button>
-        <div className='md:min-h-[40rem] min-h-[32rem] container max-w-6xl mx-auto flex flex-col md:items-center justify-start text-white md:px-0 px-6'>
+        <div className='md:min-h-[40rem] min-h-[32rem] container max-w-6xl mx-auto flex flex-col md:items-center justify-start text-white md:px-0 px-6 lowercase'>
           <div className='font-semibold md:text-[6.7rem] text-4xl tracking-tight mb-1'>not for <br className='md:hidden' /> <span className='font-serif italic'>everyone.</span> clearly</div>
 
           <div className='text-2xl font-medium container mx-auto flex justify-between'>
