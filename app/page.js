@@ -27,7 +27,7 @@ const Page = () => {
   };
 
   return (
-    <div className='min-h-screen w-full relative'>
+    <div className='h-screen overflow-hidden w-full relative'>
       <div>
         <NavLink1 />
       </div>
@@ -41,10 +41,10 @@ const Page = () => {
           onClick={toggleMenu}
           className="cursor-pointer p-4 transition-colors"
         >
-          {isMenuOpen ? <X className='w-5 text-white' /> : ''}
+          {isMenuOpen ? <img src='/close.svg' className='w-5 invert' /> : ''}
         </button>
         <div className='md:min-h-[40rem] min-h-[32rem] container max-w-6xl mx-auto flex flex-col md:items-center justify-start text-white md:px-0 px-6 lowercase font-[CalSans]'>
-          <div className='md:text-[7.4rem] text-4xl tracking-tight mb-2'>not for <br className='md:hidden' /> <span className={`${dms.className} font-extrabold stroke-white italic`}>everyone.</span> clearly</div>
+          <div className='md:text-[7.3rem] text-4xl tracking-tight mb-2'>not for <br className='md:hidden' /> <span className={`${dms.className} font-extrabold stroke-white italic`}>everyone.</span> clearly.</div>
 
           <div className={cn('font-extralight md:text-2xl text-lg container mx-auto flex justify-between', `${inter.className}`)}>
             <div>usa</div>
@@ -52,10 +52,10 @@ const Page = () => {
             <div>dubai</div>
           </div>
 
-           <div className={`md:text-2xl text-lg container max-w-6xl mx-auto flex flex-col -space-y-2 items-end duration-500 ease-in-out tracking-tight ${isMenuOpen ? 'md:-translate-x-72 -translate-x-40' : '-translate-x-20'}`}>
+           <div className={`md:text-2xl text-lg container max-w-6xl mx-auto flex flex-col -space-y-2 items-end duration-500 ease-in-out tracking-tight ${isMenuOpen ? 'md:-translate-x-72 -translate-x-40' : '-translate-x-14'}`}>
             <div onClick={toggleMenu} className={`${inter.className} font-bold cursor-pointer -translate-x-6`}><span className={`font-medium font-serif italic text-sm pr-1 ${dms.className}`}>(08)</span>menu</div>
             <div className={`${inter.className} font-bold cursor-pointer`}><span className={`font-medium font-serif italic text-sm pr-1 ${dms.className}`}>(01)</span>sign up/in</div>
-            <Link href='https://www.instagram.com/wear.cvnt/' className={`${inter.className} translate-x-14 font-bold cursor-pointer`}><span className={`font-medium font-serif italic text-sm pr-1 ${dms.className}`}>(01)</span>instagram</Link>
+            <Link href='https://www.instagram.com/wear.cvnt/' target="_blank" className={`${inter.className} translate-x-12 font-bold cursor-pointer`}><span className={`font-medium font-serif italic text-sm pr-1 ${dms.className}`}>(01)</span>instagram</Link>
           </div>
         </div>
       </div>

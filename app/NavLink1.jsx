@@ -11,6 +11,7 @@ const inter = Inter({
 
 const NavLink1 = () => {
   const [activeBackground, setActiveBackground] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const navGroups = [
     // First group: login, signup
@@ -78,13 +79,24 @@ const NavLink1 = () => {
               {group.map((item) => (
                 <motion.li
                   key={item.id}
-                  onHoverStart={() => setActiveBackground(item.bgImage)}
-                  onHoverEnd={() => setActiveBackground(null)}
-                  whileHover={{ scale: 1.02 }}
+                  onHoverStart={() => {
+                    setActiveBackground(item.bgImage);
+                    setHoveredItem(item.id);
+                  }}
+                  onHoverEnd={() => {
+                    setActiveBackground(null);
+                    setHoveredItem(null);
+                  }}
                 >
                   <a
                     href={`#${item.id}`}
-                    className={cn("md:text-4xl text-2xl tracking-tighter md:px-4 py-2 text-neutral-100 transition-colors duration-300", `${inter.className} font-black`)}
+                    className={cn(
+                      "md:text-4xl text-2xl tracking-tighter md:px-4 py-2 transition-colors duration-300",
+                      `${inter.className} font-black`,
+                      hoveredItem === null || hoveredItem === item.id 
+                        ? "text-neutral-100" 
+                        : "text-[#2d2d2d]"
+                    )}
                   >
                     {item.label}
                   </a>
@@ -92,7 +104,7 @@ const NavLink1 = () => {
               ))}
               {/* Add gap between groups except after the last one */}
               {groupIndex < navGroups.length - 1 && (
-                <div className="h-6"></div> // Adjust this value to change the gap size
+                <div className="h-4"></div>
               )}
             </div>
           ))}
