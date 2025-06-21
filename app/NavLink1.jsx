@@ -39,7 +39,7 @@ const NavLink1 = () => {
   ];
 
   return (
-    <div className="relative h-screen w-full bg-neutral-900 overflow-hidden">
+    <div className="relative h-screen w-full bg-black overflow-hidden">
       {/* Background Image Container */}
       <div className="absolute inset-0">
         <AnimatePresence>
