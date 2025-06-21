@@ -44,7 +44,7 @@ const Page = () => {
           {isMenuOpen ? <img src='/close.svg' className='w-5 invert' /> : ''}
         </button>
         <div className='md:min-h-[40rem] min-h-[32rem] container max-w-6xl mx-auto flex flex-col md:items-center justify-start text-white md:px-0 px-6 lowercase font-[CalSans]'>
-          <div className='md:text-[7.3rem] text-4xl tracking-tight mb-2'>not for <br className='md:hidden' /> <span className={`${dms.className} font-extrabold stroke-white italic`}>everyone.</span> clearly.</div>
+          <div className='md:text-[7.3rem] text-4xl tracking-tight mb-2'>not for <br className='md:hidden' /> <span className={`${dms.className} font-black stroke-white italic`}>everyone.</span> clearly.</div>
 
           <div className={cn('font-extralight md:text-2xl text-lg container mx-auto flex justify-between', `${inter.className}`)}>
             <div>usa</div>
