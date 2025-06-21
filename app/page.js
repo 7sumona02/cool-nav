@@ -52,7 +52,7 @@ const Page = () => {
             <div>dubai</div>
           </div>
 
-           <div className={`md:text-2xl text-xl container max-w-6xl mx-auto flex flex-col -space-y-2 items-end duration-500 ease-in-out tracking-tight ${isMenuOpen ? 'md:-translate-x-72 -translate-x-40' : '-translate-x-20'}`}>
+           <div className={`md:text-2xl text-lg container max-w-6xl mx-auto flex flex-col -space-y-2 items-end duration-500 ease-in-out tracking-tight ${isMenuOpen ? 'md:-translate-x-72 -translate-x-40' : '-translate-x-20'}`}>
             <div onClick={toggleMenu} className={`${inter.className} font-bold cursor-pointer -translate-x-6`}><span className={`font-medium font-serif italic text-sm pr-1 ${dms.className}`}>(08)</span>menu</div>
             <div className={`${inter.className} font-bold cursor-pointer`}><span className={`font-medium font-serif italic text-sm pr-1 ${dms.className}`}>(01)</span>sign up/in</div>
             <Link href='https://www.instagram.com/wear.cvnt/' className={`${inter.className} translate-x-14 font-bold cursor-pointer`}><span className={`font-medium font-serif italic text-sm pr-1 ${dms.className}`}>(01)</span>instagram</Link>
