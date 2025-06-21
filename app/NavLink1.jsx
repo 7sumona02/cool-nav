@@ -73,7 +73,7 @@ const NavLink1 = () => {
 
       {/* Navigation */}
       <nav className="relative z-10 flex h-full items-center">
-        <ul className="flex flex-col p-8 text-neutral-800">
+        <ul className="flex flex-col p-8 text-[#2d2d2d]">
           {navGroups.map((group, groupIndex) => (
             <div key={`group-${groupIndex}`} className="flex flex-col">
               {group.map((item) => (
@@ -91,7 +91,7 @@ const NavLink1 = () => {
                   <a
                     href={`#${item.id}`}
                     className={cn(
-                      "md:text-4xl text-2xl tracking-tighter md:px-4 py-2 transition-colors duration-300",
+                      "md:text-4xl text-2xl tracking-tighter md:px-4 py-2 transition-colors",
                       `${inter.className} font-black`,
                       hoveredItem === null || hoveredItem === item.id 
                         ? "text-neutral-100" 
