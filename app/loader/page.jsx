@@ -42,7 +42,7 @@ export default function TunnelZoomExperience() {
             }}
           >
             <h1 className="text-5xl md:text-8xl font-bold text-white">
-              ENTER THE TUNNEL
+              MacBook
             </h1>
           </motion.div>
         </div>
